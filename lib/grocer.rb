@@ -17,14 +17,14 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   receipt =[];
   cart.length.times do |i|
-    if(check_receipt(receipt,cart[i]))
+    if(is_on_receipt(receipt,cart[i]))
       
     end
     
   end
 end
 
-def check_receipt(receipt,item)
+def is_on_receipt(receipt,item)
   
 end
   
