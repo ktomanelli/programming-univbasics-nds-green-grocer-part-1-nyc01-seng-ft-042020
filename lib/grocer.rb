@@ -31,6 +31,11 @@ def consolidate_cart(cart)
 end
 
 def is_on_receipt(receipt,item)
-  
+  receipt.length.times do |i|
+    if(receipt[i][:name]==item[:name])
+      return i
+    end
+  end
+  return nil
 end
   
