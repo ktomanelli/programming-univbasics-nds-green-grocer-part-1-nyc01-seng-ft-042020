@@ -18,7 +18,9 @@ def consolidate_cart(cart)
   receipt =[];
   cart.length.times do |i|
     if(is_on_receipt(receipt,cart[i]))
-      receipt.select{|item|item[:item]==cart[i][:item]}
+      increment_item = (receipt.select{|item|item[:item]==cart[i][:item]})
+      increment_item[0][:count]+=1
+      receipt
       
     end
     
