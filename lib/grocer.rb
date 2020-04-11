@@ -28,6 +28,7 @@ def consolidate_cart(cart)
       receipt.push(new_item)
     end
   end
+  receipt
 end
 
 def is_on_receipt(receipt,item)
