@@ -16,10 +16,13 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   receipt =[];
-  
-  
-
+  cart.length.times do |i|
+    
+    
+  end
 end
 
-
+def check_receipt(receipt,item)
+  
+end
   
