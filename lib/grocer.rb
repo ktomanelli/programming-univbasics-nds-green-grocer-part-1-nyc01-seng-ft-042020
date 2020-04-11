@@ -17,11 +17,15 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   receipt =[];
   cart.length.times do |i|
-    if(is_on_receipt(receipt,cart[i]))
+    location_in_receipt = is_on_receipt(receipt,cart[i])
+    if(location_in_receipt!=nil)
+    #increment count on receipt
+    
       increment_item = (receipt.select{|item|item[:item]==cart[i][:item]})
       increment_item[0][:count]+=1
       receipt
-      
+    else
+      #add item to receipt
     end
     
   end
