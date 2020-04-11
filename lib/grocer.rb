@@ -20,14 +20,13 @@ def consolidate_cart(cart)
     location_in_receipt = is_on_receipt(receipt,cart[i])
     if(location_in_receipt!=nil)
     #increment count on receipt
-    
-      increment_item = (receipt.select{|item|item[:item]==cart[i][:item]})
-      increment_item[0][:count]+=1
-      receipt
+      receipt[location_in_receipt][:count]+=1
     else
       #add item to receipt
+      new_item = cart[i]
+      new_item[:count] = 1
+      receipt.push(new_item)
     end
-    
   end
 end
 
